@@ -1,0 +1,228 @@
+/* Reset dan Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    margin-left: 2rem;
+}
+.nav-links a:hover {
+    color: #ffd700;
+}
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url(img/Pantai_Bali.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px; /* Offset for fixed header */
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.btn {
+    background-color: #ffd700;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background-color: #ffed4e;
+}
+
+/* Destinations Section */
+.destinations {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.destinations h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #007bff;
+}
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.destination-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.destination-card:hover {
+    transform: translateY(-10px);
+}
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.destination-card h3 {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.destination-card p {
+    padding: 0 1rem;
+    color: #666;
+}
+.destination-card .btn {
+    margin: 1rem;
+    display: inline-block;
+}
+
+.form {
+    border: 2px solid white;
+    padding: 4rem 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.form h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.form input, textarea {
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid gray;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-kirim {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    width: 100%;
+    /* padding: 12px; */
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: #007bff;
+    padding: 0.75rem 1.5rem;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-kirim:hover {
+    background-color: #4199f7;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #007bff;
+        padding: 1rem 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .destinations h2 {
+        font-size: 2rem;
+    }
+}
