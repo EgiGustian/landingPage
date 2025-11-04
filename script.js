@@ -17,3 +17,34 @@ document.querySelectorAll('a').forEach(anchor => {
         navLinks.classList.remove('active'); // Tutup menu setelah klik
     });
 });
+
+// Modal functionality
+const modal = document.getElementById('modal');
+const modalTitle = document.getElementById('modal-title');
+const modalDescription = document.getElementById('modal-description');
+const closeBtn = document.querySelector('.close');
+
+// Event listener untuk tombol "Pelajari Lebih Lanjut"
+document.querySelectorAll('.detail').forEach(button => {
+    button.addEventListener('click', function() {
+        const card = this.closest('.destination-card');
+        const title = card.getAttribute('data-title');
+        const description = card.getAttribute('data-description');
+
+        modalTitle.textContent = title;
+        modalDescription.textContent = description;
+        modal.style.display = 'flex';
+    });
+});
+
+// Tutup modal saat klik close button
+closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Tutup modal saat klik di luar modal content
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
