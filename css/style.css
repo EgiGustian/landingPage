@@ -68,7 +68,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background-image: url(img/Pantai_Bali.jpeg);
+    background-image: url(../img/Pantai_Bali.jpeg);
     background-size: cover;
     background-position: center;
     height: 100vh;
